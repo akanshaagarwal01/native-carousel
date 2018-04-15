@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+#containAll {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#container {
+  height: 400px;
+  width: 320%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.slide {
+  height: 100%;
+  width: 80%;
+  position: relative;
+  left: 135px;
+}
+
+.trans {
+  transition: transform 1s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.slide img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.arrow img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 15px);
+  cursor: pointer;
+}
+
+.prev img {
+  left: 165px;
+}
+
+.next img {
+  right: 165px;
+}
+
+#marker {
+  position: absolute;
+  bottom: 15px;
+  left: 45%;
+  width: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.mark {
+  border: 1px solid orange;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.active {
+  background-color: orange;
+}
